@@ -184,12 +184,22 @@ export async function signIn(data: LoginFormData) {
   try {
     const supabase = await getSupabaseClient();
 
+    // Verificar que las variables de entorno estén disponibles
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    
+    if (!supabaseUrl || !supabaseKey) {
+      console.error('Missing Supabase environment variables')
+      return { error: 'Error de configuración del servidor. Revisa las variables de entorno.' };
+    }
+
     const { data: authData, error } = await supabase.auth.signInWithPassword({
       email: data.email,
       password: data.password,
     });
 
     if (error) {
+      console.error('Supabase auth error:', error.message)
       return { error: error.message };
     }
 
@@ -199,8 +209,9 @@ export async function signIn(data: LoginFormData) {
     }
 
     return { error: 'Error al iniciar sesión' };
-  } catch {
-    return { error: 'Error inesperado' };
+  } catch (error) {
+    console.error('SignIn error:', error)
+    return { error: `Error inesperado: ${error instanceof Error ? error.message : 'Unknown'}` };
   }
 }
 
