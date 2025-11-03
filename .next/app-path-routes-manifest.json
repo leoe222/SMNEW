@@ -1,7 +1,7 @@
 {
+  "/_not-found/page": "/_not-found",
   "/api/assessments/approve/route": "/api/assessments/approve",
   "/api/assessments/pending/route": "/api/assessments/pending",
-  "/_not-found/page": "/_not-found",
   "/api/assessments/route": "/api/assessments",
   "/api/assessments/reject/route": "/api/assessments/reject",
   "/api/team/category-averages/route": "/api/team/category-averages",
@@ -9,12 +9,12 @@
   "/favicon.ico/route": "/favicon.ico",
   "/api/team/member/[id]/route": "/api/team/member/[id]",
   "/api/profile/avatar/route": "/api/profile/avatar",
-  "/(auth)/login/page": "/login",
   "/(auth)/register/page": "/register",
+  "/(auth)/login/page": "/login",
   "/page": "/",
-  "/test-styles/page": "/test-styles",
-  "/auto-evaluaciones/page": "/auto-evaluaciones",
-  "/auto-evaluaciones/[slug]/page": "/auto-evaluaciones/[slug]",
   "/profile/page": "/profile",
+  "/test-styles/page": "/test-styles",
+  "/auto-evaluaciones/[slug]/page": "/auto-evaluaciones/[slug]",
+  "/auto-evaluaciones/page": "/auto-evaluaciones",
   "/dashboard/page": "/dashboard"
 }
