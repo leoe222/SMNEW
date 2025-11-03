@@ -2,10 +2,9 @@ import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 
 // Next 15: ensure params is awaited before property access (in edge/runtime changes)
-export async function GET(request: Request, context: { params: Promise<{ id: string }> } | { params: { id: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   // Support both direct object and promise (defensive)
-  // @ts-ignore
-  const resolvedParams = typeof context.params.then === 'function' ? await context.params : context.params
+  const resolvedParams = await params
   const { id } = resolvedParams
 
   const supabase = await createClient()

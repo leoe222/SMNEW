@@ -64,7 +64,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       if (!error && data) {
         // Resolver nombres de aprobadores/rechazadores
         const peopleIds = Array.from(new Set((data as any[]).flatMap(r => [r.approved_by, r.rejected_by]).filter(Boolean)))
-        let nameById = new Map<string, string>()
+        const nameById = new Map<string, string>()
         if (peopleIds.length) {
           const { data: people } = await supabase
             .from('profiles')

@@ -1,0 +1,20 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/assessments/approve/route": "app/api/assessments/approve/route.js",
+  "/api/assessments/pending/route": "app/api/assessments/pending/route.js",
+  "/api/team/category-averages/route": "app/api/team/category-averages/route.js",
+  "/api/team/improvement/route": "app/api/team/improvement/route.js",
+  "/api/assessments/route": "app/api/assessments/route.js",
+  "/api/assessments/reject/route": "app/api/assessments/reject/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/team/member/[id]/route": "app/api/team/member/[id]/route.js",
+  "/api/profile/avatar/route": "app/api/profile/avatar/route.js",
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(auth)/register/page": "app/(auth)/register/page.js",
+  "/page": "app/page.js",
+  "/test-styles/page": "app/test-styles/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/auto-evaluaciones/page": "app/auto-evaluaciones/page.js",
+  "/auto-evaluaciones/[slug]/page": "app/auto-evaluaciones/[slug]/page.js",
+  "/dashboard/page": "app/dashboard/page.js"
+}
